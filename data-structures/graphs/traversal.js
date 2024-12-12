@@ -51,3 +51,7 @@ const buildGraph = (edges) => {
 
 const isExists = undirectedPath(edges, "o", "n");
 console.log(isExists);
+
+module.exports = {
+  buildGraph,
+};
