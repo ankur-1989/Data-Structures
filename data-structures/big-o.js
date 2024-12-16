@@ -1,3 +1,14 @@
+/**
+* it checks if the size of the input grows, then how fast the time and space complexity increases.
+1. Constant - O(1)
+2. Logarithmic - O(logn)
+3. Linear - O(n)
+4. O(n logn)
+5. O(n * n)
+6. O(n * n * n)
+7. O(2n) - fibonacci function
+7. O(n!) */
+
 function logn(n) {
   // O(logn)  by default base is 2 in computer science.
   while (n > 1) {
