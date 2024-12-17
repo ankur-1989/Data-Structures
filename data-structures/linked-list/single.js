@@ -1,5 +1,17 @@
 // Single Linked List implementation
 
+/** Algorithm
+ * 
+ * A node with data variable and pointer to the next node. 
+ * then a head pointer which will point to the first node of the linked list.
+ * if head == null then it is an empty list. 
+ * 
+ * InsertAtBegining(elem) -> to insert the element at the start of the linked list. 
+ * 
+ * 
+ * 
+ */
+
 class Node {
   constructor(data) {
     this.data = data;
@@ -12,68 +24,54 @@ class SinglyLinkedList {
     this.head = null;
     this.size = 0;
   }
-
-  add(data) {
+  insertAtBegin(data) {
     const newNode = new Node(data);
-    if (this.head == null) {
-      this.head = newNode;
-    } else {
-      let current = this.head;
-      while (current.next != null) {
-        current = current.next;
-      }
-      current.next = newNode;
-    }
+    newNode.next = this.head;
+    this.head = newNode;
     this.size++;
   }
   length() {
     return this.size;
   }
   insertAt(data, k) {
-    if (k > this.size) {
-      throw "indexOutofbound";
-    }
+    /** Use Cases
+     * 1. List can be empty
+     * 2. or out of bound of Linked list.
+     */
+    if (k < 1 || k > this.size + 1) throw "Index out of bound";
+    const newNode = new Node(data);
     if (k == 1) {
-      const n = new Node(data);
-      const temp = this.head;
-      this.head = n;
-      this.head.next = temp;
+      newNode.next = this.head;
+      this.head = newNode;
       this.size++;
-    } else {
-      const n = new Node(data);
-      let curr = this.head;
-      let temp = this.head.next;
-      let count = 0;
-      while (temp.next != null && count != k) {
-        curr = curr.next;
-        temp = temp.next;
-        count++;
-      }
-      curr.next = n;
-      curr.next.next = temp;
-      this.size++;
+      return;
     }
+    let curr = this.head;
+    for (let i = 0; i < k - 2; i++) {
+      curr = curr.next;
+    }
+    newNode.next = curr.next;
+    curr.next = newNode;
+    this.size++;
   }
-  delete(data) {
-    let temp = null;
-    if (data == this.head.data) {
-      temp = this.head;
+  delete(k) {
+    if (this.head == null) throw "List is empty";
+    if (k < 1) throw "invalid index";
+    if (k === 1) {
       this.head = this.head.next;
       this.size--;
-    } else {
-      let curr = this.head;
-      temp = this.head.next;
-      while (temp.next != null) {
-        if (temp.data == data) {
-          curr.next = temp.next;
-          this.size--;
-          break;
-        }
-        temp = temp.next;
-        curr = curr.next;
-      }
+      return;
+    }
+    let curr = this.head;
+    for (let i = 0; i < k - 2; i++) {
+      curr = curr.next;
+    }
+    if (curr.next) {
+      curr.next = curr.next.next;
+      this.size--;
     }
   }
+
   traverse() {
     let curr = this.head;
     let list = "";
@@ -81,9 +79,10 @@ class SinglyLinkedList {
       list = list + curr.data + " ";
       curr = curr.next;
     }
-    return list;
+    console.log(list);
   }
   reverse() {
+    if (this.head === null) return;
     let prev = null;
     let curr = this.head;
     while (curr != null) {
@@ -92,26 +91,30 @@ class SinglyLinkedList {
       prev = curr;
       curr = next;
     }
-    return prev;
+    this.head = prev;
   }
 }
 
 const list = new SinglyLinkedList();
-list.add(1);
-list.add(5);
-list.add(7);
-list.add(9);
-console.log(list.length());
-console.log(list.traverse());
-list.insertAt(8, 2);
-console.log(list.length());
-console.log(list.traverse());
-list.insertAt(13, 5);
-list.insertAt(14, 1);
-list.insertAt(14, 3);
-console.log(list.traverse());
-list.delete(14);
+list.insertAtBegin(5);
 
+list.insertAtBegin(4);
+list.insertAtBegin(3);
+
+list.insertAt(2, 1);
+list.insertAt(6, 3);
+list.insertAt(7, 5);
+list.insertAt(9, 7);
+// list.insertAt(10, 10); should throw error.
+list.traverse();
+list.delete(1);
+list.traverse();
+list.delete(4);
+list.traverse();
+list.delete(5);
+list.traverse();
 list.reverse();
-console.log(list.traverse());
+list.traverse();
+
+
 // Double Linked list implementation
