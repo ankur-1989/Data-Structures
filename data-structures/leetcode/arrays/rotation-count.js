@@ -1,4 +1,4 @@
-// find out how many times array was rotated? A sorted array is given.
+// find out how many times array was rotated? A sorted array is given. there will be no duplicates.
 
 function countRotation(arr) {
   let N = arr.length;
@@ -19,7 +19,7 @@ function countRotation(arr) {
       low = mid + 1;
     }
   }
-  return null;
+  return -1;
 }
 
 console.log(countRotation([11, 12, 15, 18, 2, 5, 6, 8]));
