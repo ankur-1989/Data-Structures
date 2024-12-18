@@ -81,6 +81,11 @@ class SinglyLinkedList {
     }
     console.log(list);
   }
+  traverseForwardRecursion(head) {
+    if (head === null) return;
+    this.traverseForwardRecursion(head.next);
+    console.log("Node ->", head.data); // after call will print in reverse order.
+  }
   reverse() {
     if (this.head === null) return;
     let prev = null;
@@ -107,14 +112,7 @@ list.insertAt(7, 5);
 list.insertAt(9, 7);
 // list.insertAt(10, 10); should throw error.
 list.traverse();
-list.delete(1);
-list.traverse();
-list.delete(4);
-list.traverse();
-list.delete(5);
-list.traverse();
-list.reverse();
-list.traverse();
+console.log(list.traverseForwardRecursion(list.head));
 
 
 // Double Linked list implementation
