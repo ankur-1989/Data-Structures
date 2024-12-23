@@ -1,3 +1,9 @@
+/** not the best sorting algo but little efficient than bubble sort and selection sort.
+ *
+ * we are dividing the array in two sets. sorted and unsorted.
+ *and it happens in-place.
+ */
+
 function insertion(arr) {
   // O(n**n)
   for (let i = 0; i < arr.length; i++) {
