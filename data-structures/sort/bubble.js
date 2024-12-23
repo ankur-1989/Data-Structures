@@ -1,3 +1,11 @@
+/** Sorting classifications
+ * 1. Time Complexity
+ * 2. Space Complexity
+ * 3. Stability - preserve the relative order.
+ * 4. Internal sort vs External sort - Ram vs external storage
+ * 5. recursive or non-recursive
+ */
+
 function bubble(arr) {
   // O(n**2)
 
