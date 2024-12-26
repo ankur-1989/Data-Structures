@@ -1,3 +1,10 @@
+/** Merge Sort
+ * It is not a in-place sorting algo.
+ * recursive.
+ * stable
+ * Divide and conquer
+ */
+
 function mergeSort(arr) {
   // O(n logn)
   if (arr.length < 2) return arr;
