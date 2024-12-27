@@ -20,3 +20,5 @@ function Queue() {
     return collection.length == 0;
   };
 }
+
+/** In circular array - next position will be (i+1)%N  and previous position will be (i+N-1)%N*/
