@@ -10,4 +10,9 @@
  * Complete binary tree - all nodes must have 2 except leaf nodes.
  * level === depth
  * max no of nodes at level i = 2 ^ i
+ * Perfect Binary Tree: All levels will be completely filled.
+ * 
+ * Max no of nodes in a binary tree with height h 
+ * 2 ^ (h+1) - 1
+ * height of a perfect tree with the given number of nodes - h = log2(n) - 1
  */
