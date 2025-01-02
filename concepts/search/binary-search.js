@@ -12,5 +12,9 @@ function binarySearch(arr, start, end, target) {
   if (arr[mid] < target) return binarySearch(arr, mid + 1, end, target);
 }
 
+module.exports = {
+  binarySearch,
+};
+
 const result = binarySearch(array, start, end, target);
 console.log(result);

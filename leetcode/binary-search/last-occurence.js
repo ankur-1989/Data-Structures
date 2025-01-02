@@ -13,3 +13,7 @@ function lastOccurence(arr, target) {
   }
   return result;
 }
+
+module.exports = {
+  lastOccurence,
+};

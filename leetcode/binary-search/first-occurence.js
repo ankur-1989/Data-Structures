@@ -13,3 +13,7 @@ function firstOccurence(arr, target) {
   }
   return result;
 }
+
+module.exports = {
+  firstOccurence,
+};
