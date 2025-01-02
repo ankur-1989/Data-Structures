@@ -4,6 +4,7 @@ let end = array.length - 1;
 target = 10;
 
 function binarySearch(arr, start, end, target) {
+  // O(logn)
   if (start > end) return false;
   let mid = Math.floor((start + end) / 2);
   if (arr[mid] === target) return true;
