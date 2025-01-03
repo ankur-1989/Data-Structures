@@ -1,5 +1,6 @@
 // find out how many times array was rotated? A sorted array is given. there will be no duplicates.
-
+// basically finding the min element in the array.
+// Array is circularly sorted
 function countRotation(arr) {
   let N = arr.length;
   let low = 0;
