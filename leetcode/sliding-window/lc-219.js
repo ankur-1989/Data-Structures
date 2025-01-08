@@ -21,5 +21,6 @@ var containsNearbyDuplicate = function (nums, k) {
       seen.set(nums[right], right);
     }
   }
+
   return false;
 };
