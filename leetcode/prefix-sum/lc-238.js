@@ -15,3 +15,4 @@ var productExceptSelf = function (nums) {
   }
   return answer;
 };
+
