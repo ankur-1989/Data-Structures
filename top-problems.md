@@ -1,7 +1,7 @@
 ### Top Problems
 
-* [ ] Finding Median of two sorted arrays
-* [ ] Removing the Nth from the end of the list.
+* [X] Finding Median of two sorted arrays
+* [X] Removing the Nth from the end of the list.
 * [ ] Finding if Sudoku is Valid
 * [ ] Finding missing positive integer
 * [ ] rotating the image
@@ -22,15 +22,20 @@
 
 ### Sliding Window
 
-* [ ] **Maximum Average subarray I -  643**
+* [X] **Maximum Average subarray I -  643**
 * [ ] Longest substring without repeating characters - 3
 * [ ] Minimum Window Substring - 76
+* [ ] Longest repeating character replacement - 424
+* [ ] Substrings of size three with distinct characters - 1876
+* [ ] Minimum window string - 76
 
 ### Fast and slow pointers
 
 * [X] Linked List cycle - 141
+* [X] Linked List cycle II - 142
 * [X] Happy Number - 202
 * [X] Find the duplicate number - 287
+* [X] Remove nth node from the end of list - 19
 
 ### Linked List in place reversal
 
@@ -64,3 +69,49 @@ Cases - Searching in a nearly sorted array, searching in a rotated array, search
 * [X] Search in Rotated Array - 33
 * [X] Find minimum in sorted rotated array - 153
 * [ ] search a 2D matrix II - 240
+
+### Binary Tree Traversal
+
+We can traverse binary tree in four orders: Pre-Order, In-Order, Post-Order, Level-Order
+
+* [ ] Binary tree path - 257 (pre-order)
+* [ ] kth smallest element in a BST - 230 (in-order)
+* [ ] binary tree maximum path sum - 124 (postorder)
+* [ ] binary tree level order traversal III - 107 (level order traversal)
+
+### DFS
+
+* [ ] Clone graph - 133
+* [ ] Path Sum II - 113
+* [ ] Course Schedule II - 210
+
+### Breadth First Search
+
+* [ ] Binary Tree level order traversal - 102
+* [ ] Rotting Oranges - 994
+* [ ] Word ladder - 127
+
+### Matrix Traversal
+
+* [ ] Flood Fill - 733
+* [ ] Number of islands - 200
+* [ ] Surrounded regions - 130
+
+### Backtracking
+
+* [ ] Permutations - 46
+* [ ] Subsets - 78
+* [ ] N-Queens - 51
+
+### Dynamic Programming
+
+* [ ] Fibonacci numbers
+* [ ] 0/1 knapsack
+* [ ] Longest common subsequence - 1143
+* [ ] Longest increasing subsequence - 300
+* [ ] Subset sum
+* [ ] Matrix Chain Multiplication
+* [ ] Climbing stairs - 70
+* [ ] Coin Change - 322
+* [ ] Partition equal subset sum - 416
+* [ ] Burst Ballons - 312

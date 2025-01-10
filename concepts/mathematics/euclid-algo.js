@@ -25,4 +25,8 @@ const gcdR = (num1, num2) => {
   }
 }
 
-console.log(gcdR(105, 350));
+console.log(gcdR(2, 8));
+
+module.exports = {
+  gcdR,
+};

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>A linear data structure with two primary operations: enqueue and dequeue. It follows FIFO.</p>
+    <p>Enqueue: adding item in the last</p>
+    <p>Dequeue: deleting item from the front</p>
+    <h3>Usage of Queue</h3>
+    <ul>
+        <li>Any waiting line models</li>
+        <li>Web server request management</li>
+        <li>Breadth first search graph traversal</li>
+        <li>to track x most elements recently added.</li>
+    </ul>
+    <h3>Time Complexity</h3>
+    <table>
+        <tr>
+            <td>Enqueue</td>
+            <td>O(1)</td>
+        </tr>
+        <tr>
+            <td>Dequeue</td>
+            <td>O(1)</td>
+        </tr>
+        <tr>
+            <td>Peeking</td>
+            <td>O(1)</td>
+        </tr>
+        <tr>
+            <td>Contains</td>
+            <td>O(n)</td>
+        </tr>
+        <tr>
+            <td>Removal</td>
+            <td>O(1)</td>
+        </tr>
+        <tr>
+            <td>isEmpty</td>
+            <td>O(1)</td>
+        </tr>
+    </table>
+
+    <h2>Priority Queue</h2>
+    <p>ADT similar to Queue except every element has certain priority. Only supports comparable data. Data should be relatively comparable.
+        Priority Queue uses a heap to maintain the order.
+    </p>
+    <p>A heap is a tree based DS that satisfies the heap property. There are two types of Heap. Max Heap and Min-Heap.</p>
+    <p>Heap should not contain cycle. it should be tree.</p>
+    <h3>Usage</h3>
+    <ul>
+        <li>Djikstra shortest path algo</li>
+        <li>next best and next worst element</li>
+        <li>used in huffman coding used for loseless data compression</li>
+        <li>Best First Search algo such as A* for next promising nodes</li>
+        <li>Minimum spanning tree algos</li>
+    </ul>
+    <table>
+        <thead>Time Complexity</thead>
+        <tbody>
+            <tr>
+                <td>Binary Heap construction</td>
+                <td>O(n)</td>
+            </tr>
+            <tr><td>Polling</td><td>O(logn)</td></tr>
+            <tr><td>Peeking</td><td>O(1)</td></tr>
+            <tr><td>Adding</td><td>O(logn)</td></tr>
+            <tr><td>Naive removing</td><td>O(n)</td></tr>
+            <tr><td>Advanced removing with hash table</td><td>O(logn)</td></tr>
+            <tr><td>Naive contains</td><td>O(n)</td></tr>
+            <tr><td>contains with the hash table</td><td>O(1)</td></tr>
+        </tbody>
+    </table>
+    <h4>PQ problems</h4>
+    <ul>
+        <li>Turning Min Heap to Max Heap or vice versa</li>
+        <ol>
+            <li>Negating the comparator</li>
+            <li>Negating the numbers while inserting and negate again while taking out.</li>
+        </ol>
+    </ul>
+</body>
+</html>

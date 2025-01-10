@@ -98,6 +98,59 @@ class SinglyLinkedList {
     }
     this.head = prev;
   }
+  revereRecursion(p) {
+    if (p.next == null) {
+      this.head = p;
+      return;
+    }
+    this.revereRecursion(p.next);
+    const q = p.next;
+    p = q.next;
+    p.next = null;
+  }
+  /**
+   * Definition for singly-linked list.
+   * function ListNode(val, next) {
+   *     this.val = (val===undefined ? 0 : val)
+   *     this.next = (next===undefined ? null : next)
+   * }
+   */
+  /**
+   * @param {ListNode} head
+   * @param {number} left
+   * @param {number} right
+   * @return {ListNode}
+   */
+  reverseBetween(left, right) {
+    let start = 1;
+    let curr = this.head;
+    let prev = null;
+    let leftNode = this.head;
+    // After this while loop, curr should be pointing to the node at left position. start should be equal to left.
+    while (start < left) {
+      curr = curr.next;
+      start++;
+    }
+
+    while (leftNode.next != curr) {
+      leftNode = leftNode.next;
+    }
+
+    while (curr != null && start <= right) {
+      const next = curr.next;
+      console.log(curr.data);
+      curr.next = prev;
+      prev = curr;
+      curr = next;
+      start++;
+    }
+    let temp = prev;
+    while (temp.next != null) {
+      temp = temp.next;
+    }
+    temp.next = curr;
+    leftNode.next = prev;
+  }
 }
 
 const list = new SinglyLinkedList();
@@ -106,13 +159,15 @@ list.insertAtBegin(5);
 list.insertAtBegin(4);
 list.insertAtBegin(3);
 
-list.insertAt(2, 1);
-list.insertAt(6, 3);
-list.insertAt(7, 5);
-list.insertAt(9, 7);
+list.insertAtBegin(2);
+list.insertAtBegin(1);
 // list.insertAt(10, 10); should throw error.
 list.traverse();
-console.log(list.traverseForwardRecursion(list.head));
+list.reverseBetween(2, 4);
+list.traverse();
+// console.log(list.traverseForwardRecursion(list.head));
 
-
+module.exports = {
+  SinglyLinkedList,
+};
 // Double Linked list implementation
